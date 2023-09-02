@@ -5,7 +5,8 @@ const exampleOptions = [
   { name: "useLayoutEffect", value: React.lazy(() => import('./examples/UseLayoutEffectExample'))},
   { name: "useReducer", value: React.lazy(() => import('./examples/UseReducerExample'))},
   { name: "useImperativeHandle", value: React.lazy(() => import('./examples/UseImperativeHandleExample'))},
-]
+  { name: "useTransition", value: React.lazy(() => import('./examples/UseTransitionExample'))},
+];
 
 function App() {
   const [optionName, setOptionName] = useState(exampleOptions[0].name);
