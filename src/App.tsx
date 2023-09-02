@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 const exampleOptions = [
   { name: "useLayoutEffect", value: React.lazy(() => import('./examples/UseLayoutEffectExample'))},
   { name: "useReducer", value: React.lazy(() => import('./examples/UseReducerExample'))},
+  { name: "useImperativeHandle", value: React.lazy(() => import('./examples/UseImperativeHandleExample'))},
 ]
 
 function App() {
@@ -12,10 +13,12 @@ function App() {
 
   return (
     <>
-      Choose example
-      <select value={optionName} onChange={e => setOptionName(e.target.value)}>
-        {exampleOptions.map(({name}) => <option key={name} value={name}>{name}</option>)}
-      </select>
+      <div style={{marginBottom: "2rem"}}>
+        Choose example
+        <select value={optionName} onChange={e => setOptionName(e.target.value)}>
+          {exampleOptions.map(({name}) => <option key={name} value={name}>{name}</option>)}
+        </select>
+      </div>
       <div>
         <React.Suspense fallback={"Loading..."}>
           {Comp && <Comp />}

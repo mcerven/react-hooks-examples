@@ -27,30 +27,34 @@ export default function UseReducerComponent() {
 
   return (
     <>
-      <label>
-        Username
-        <input
-          type="text"
-          value={user.username}
-          onChange={(e) => dispatch(
-            {type: "UPDATE", payload: {username: e.target.value}}
-          )} />
-      </label>
-      <label>
-        Age
-        <input
-          type="number"
-          value={user.age}
-          onChange={(e) => dispatch(
-            {type: "UPDATE", payload: {age: e.target.valueAsNumber}}
-          )} />
-        <button
-          type="button"
-          onClick={() => dispatch({type: "DECREMENT_AGE"})}>-</button>
-        <button
-          type="button"
-          onClick={() => dispatch({type: "INCREMENT_AGE"})}>+</button>
-      </label>
+      <div>
+        <label>
+          Username
+          <input
+            type="text"
+            value={user.username}
+            onChange={(e) => dispatch(
+              {type: "UPDATE", payload: {username: e.target.value}}
+            )} />
+        </label>
+      </div>
+      <div>
+        <label>
+          Age
+          <input
+            type="number"
+            value={user.age}
+            onChange={(e) => dispatch(
+              {type: "UPDATE", payload: {age: e.target.valueAsNumber}}
+            )} />
+          <button
+            type="button"
+            onClick={() => dispatch({type: "DECREMENT_AGE"})}>-</button>
+          <button
+            type="button"
+            onClick={() => dispatch({type: "INCREMENT_AGE"})}>+</button>
+        </label>
+      </div>
       <pre>{JSON.stringify(user, null, 2)}</pre>
     </>
   )

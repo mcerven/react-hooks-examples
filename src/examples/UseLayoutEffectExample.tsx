@@ -14,8 +14,8 @@ export default function UseLayoutEffectComponent() {
 
   return (
     <>
-      <div ref={box1} style={{ width: '40px', height: '40px', background: 'blue' }}></div>
-      <div ref={box2} style={{ position: 'absolute', width: '40px', height: '40px', background: 'red' }}></div>
+      <div ref={box1} style={{ width: '80px', height: '80px', background: 'blue' }}></div>
+      <div ref={box2} style={{ position: 'absolute', width: '80px', height: '80px', background: 'red' }}></div>
     </>
   );
 }
