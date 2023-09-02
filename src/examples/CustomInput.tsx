@@ -4,7 +4,7 @@ export type CustomInputHandle = {
   focus: () => void;
 };
 
-export const CustomInput = forwardRef<CustomInputHandle>(function (props, ref) {
+export const CustomInput = forwardRef<CustomInputHandle>((props, ref) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useImperativeHandle(
