@@ -6,6 +6,7 @@ const exampleOptions = [
   { name: "useReducer", value: React.lazy(() => import('./examples/UseReducerExample'))},
   { name: "useImperativeHandle", value: React.lazy(() => import('./examples/UseImperativeHandleExample'))},
   { name: "useTransition", value: React.lazy(() => import('./examples/UseTransitionExample'))},
+  { name: "useDeferredValue", value: React.lazy(() => import('./examples/UseDeferredValueExample'))},
 ];
 
 function App() {

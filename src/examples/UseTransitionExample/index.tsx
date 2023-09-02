@@ -1,19 +1,13 @@
 import { useState, useTransition } from "react";
+import { SearchResult, results } from "../helpers/search-results";
 
-type Result = { key: number; text: string; };
-
-const results: Result[] = Array.from({ length: 50_000 }, (_, i) => ({
-  key: i,
-  text: `${i}`.padStart(6, "0"),
-}));
-
-function UseTransitionExample() {
-  const [searchText, setSearchText] = useState("");
-  const [searchResult, setSearchResult] = useState<Result[]>([]);
+export default function UseTransitionExample() {
+  const [input, setInput] = useState("");
+  const [searchResult, setSearchResult] = useState<SearchResult[]>([]);
   const [isPending, startTransition] = useTransition();
   
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setSearchText(e.target.value);
+    setInput(e.target.value);
 
     startTransition(() => {
       setSearchResult(results.filter(p => p.text.includes(e.target.value)));
@@ -22,7 +16,7 @@ function UseTransitionExample() {
 
   return (
     <>
-      <input type="text" value={searchText} onChange={handleChange} placeholder="Type a number" />
+      <input type="text" value={input} onChange={handleChange} placeholder="Type a number" />
       <div>
         {isPending
           ? "Loading..."
@@ -32,5 +26,3 @@ function UseTransitionExample() {
     </>
   )
 }
-
-export default UseTransitionExample
