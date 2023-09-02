@@ -1,5 +1,5 @@
 # React Hooks - Examples
-## Example usage of the following hooks:
+## Demonstration of the following less used React hooks:
 - useLayoutEffect
 - useReducer
 - useImperativeHandle
