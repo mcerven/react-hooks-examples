@@ -1,10 +1,10 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function UseLayoutEffectComponent() {
   const box1 = useRef<HTMLDivElement>(null);
   const box2 = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!box1.current || !box2.current) return;
 
     const { bottom } = box1.current.getBoundingClientRect();
