@@ -49,9 +49,11 @@ export default function UseReducerComponent() {
             )} />
           <button
             type="button"
+            style={{width: "2.5rem"}}
             onClick={() => dispatch({type: "DECREMENT_AGE"})}>-</button>
           <button
             type="button"
+            style={{width: "2.5rem"}}
             onClick={() => dispatch({type: "INCREMENT_AGE"})}>+</button>
         </label>
       </div>
