@@ -10,7 +10,7 @@ type ReducerAction = {
   payload?: Partial<User>;
 };
 
-function reducerFn(state: User, action: ReducerAction) {
+function reducerFn(state: User, action: ReducerAction): User {
   switch (action.type) {
     case "UPDATE":
       return {...state, ...action.payload};
