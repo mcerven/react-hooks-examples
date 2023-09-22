@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const exampleOptions = [
+  { name: "useContext", value: React.lazy(() => import('./examples/UseContextExample'))},
   { name: "useLayoutEffect", value: React.lazy(() => import('./examples/UseLayoutEffectExample'))},
   { name: "useReducer", value: React.lazy(() => import('./examples/UseReducerExample'))},
   { name: "useImperativeHandle", value: React.lazy(() => import('./examples/UseImperativeHandleExample'))},
